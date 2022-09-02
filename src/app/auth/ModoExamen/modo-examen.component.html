@@ -68,72 +68,48 @@
     </div>
     <div *ngIf="ResultadosPorDominio!=undefined" style="margin-bottom: 10px;">
       <div class="row" style="margin-bottom: 10px">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
           <div style="display: flex;justify-content: center;margin-left: -25px;">
             <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio1"></app-dona-puntos>
           </div>
           <div class="subtitulo">
-            Tema 1:
+            Habilidad 1:
           </div>
           <div style="font-size: 13px">
-            Network Fundamentals (Fundamentos de la red).
+            Preparar los datos.
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
           <div style="display: flex;justify-content: center;margin-left: -25px;">
             <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio2"></app-dona-puntos>
           </div>
           <div class="subtitulo">
-            Tema 2:
+            Habilidad 2:
           </div>
           <div style="font-size: 13px">
-            Network Access (Acceso a la red).
+            Modele los datos.
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
           <div style="display: flex;justify-content: center;margin-left: -25px;">
             <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio3"></app-dona-puntos>
           </div>
           <div class="subtitulo">
-            Tema 3:
+            Habilidad 3:
           </div>
           <div style="font-size: 13px">
-            IP Connectivity (Conectividad IP).
+            Visualice y analice los datos.
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
           <div style="display: flex;justify-content: center;margin-left: -25px;">
             <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio4"></app-dona-puntos>
           </div>
           <div class="subtitulo">
-            Tema 4:
+            Habilidad 4:
           </div>
           <div style="font-size: 13px">
-            IP Services (Servicios de IP).
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div style="display: flex;justify-content: center;margin-left: -25px;">
-            <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio5"></app-dona-puntos>
-          </div>
-          <div class="subtitulo">
-            Tema 5:
-          </div>
-          <div style="font-size: 13px">
-            Security Fundamentals (Fundamentos de seguridad).
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div style="display: flex;justify-content: center;margin-left: -25px;">
-            <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio6"></app-dona-puntos>
-          </div>
-          <div class="subtitulo">
-            Tema 6:
-          </div>
-          <div style="font-size: 13px">
-            Automation and Programmability (Automatización y Programabilidad).
+            Implementar y mantener activos.
           </div>
         </div>
       </div>
@@ -177,7 +153,7 @@
         Instrucciones:
       </div>
       <div style="text-align: justify">
-        En este modo se te presentarán 120 preguntas, con la estructura del examen de Certificación Cisco Certified Network Associate – CCNA 200-301. Sólo al final se te mostrará tu puntaje en el examen. Recuerda que para aprobar necesitarás obtener como mínimo un 85% de aciertos del total de preguntas en tu calificación general.
+        En este modo se te presentarán 60 preguntas, con la estructura del examen Microsoft Certified: Power BI Data Analyst Associate PL – 300. Sólo al final se te mostrará tu puntaje en el examen. Recuerda que para aprobar necesitarás obtener como mínimo un 70% de puntaje en tu calificación general o lo que vendría a ser 700 puntos de 1000 posibles.
       </div>
       <form (submit)="RegistrarExamen()" [formGroup]="userForm">
         <div class="form-horizontal" id="form-crearExamen">
@@ -232,7 +208,7 @@
         <div *ngIf="ContSimulacionesCompletadas!=0">
           <div class="card-body" style="border-radius: 0px 0px 20px 20px;padding-top:0px;padding-bottom:0px; ">
             <ng-container *ngFor="let item of SimulacionesCompletadas">
-              <div  *ngIf="item.idSimuladorCcnaModo==3" class="container" style="border-top: 1px solid #E4E4E4;margin-bottom: 20px;">
+              <div  *ngIf="item.idSimuladorPbiModo==3" class="container" style="border-top: 1px solid #E4E4E4;margin-bottom: 20px;">
                 <div class="row" style="margin-top: 20px;margin-left: 0px;">
                   <div class="col-9">
                     <div>
@@ -282,7 +258,7 @@
         <div *ngIf="ContSimulacionesIncompletas!=0">
           <div class="card-body" style="border-radius: 0px 0px 20px 20px;padding-top:0px;padding-bottom:0px; ">
             <ng-container *ngFor="let item of SimulacionesIncompletas">
-              <div  *ngIf="item.idSimuladorCcnaModo==3" class="container" style="border-top: 1px solid #E4E4E4;margin-bottom: 20px;">
+              <div  *ngIf="item.idSimuladorPbiModo==3" class="container" style="border-top: 1px solid #E4E4E4;margin-bottom: 20px;">
                 <div class="row" style="margin-top: 20px;margin-left: 0px;">
                   <div class="col-6">
                     <div>

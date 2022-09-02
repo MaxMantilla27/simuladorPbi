@@ -16,7 +16,7 @@ export class ExamenRespuestaPreguntaComponent implements OnInit {
   ) { }
   public migaPan = [
     {
-      titulo: 'Simulador CCNA',
+      titulo: 'Simulador POWER BI',
       urlWeb: '/',
     },
     {

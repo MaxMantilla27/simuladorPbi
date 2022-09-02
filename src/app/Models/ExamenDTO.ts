@@ -1,8 +1,8 @@
-import { RegistroCcnaExamenDetalleDTO } from "./ExamenDetalleDTO";
+import { RegistroPbiExamenDetalleDTO } from "./ExamenDetalleDTO";
 
-export interface RegistroCcnaExamenDTO{
+export interface RegistroPbiExamenDTO{
   id:number,
-  idSimuladorCcnaModo:number,
+  idSimuladorPbiModo:number,
   nombreExamen:string,
   tiempo:number,
   idAspNetUsers?:string,
@@ -11,12 +11,12 @@ export interface RegistroCcnaExamenDTO{
   puntaje?:number,
   desempenio?:number,
   percentil?:number,
-  idSimuladorCcnaTarea?:number,
-  idSimuladorCcnaDominio:number
+  idSimuladorPbiTarea?:number,
+  idSimuladorPbiDominio:number
 }
-export interface RegistroCcnaExamenRespuestaDTO{
+export interface RegistroPbiExamenRespuestaDTO{
   id:number,
-  idSimuladorCcnaModo:number,
+  idSimuladorPbiModo:number,
   nombreExamen:string,
   tiempo:number,
   idAspNetUsers?:string,
@@ -25,7 +25,7 @@ export interface RegistroCcnaExamenRespuestaDTO{
   puntaje?:number,
   desempenio?:number,
   percentil?:number,
-  respuestaDetalle: Array<RegistroCcnaExamenDetalleDTO>,
+  respuestaDetalle: Array<RegistroPbiExamenDetalleDTO>,
   idSimuladorTipoRespuesta:number
 }
 export interface ExamenIntentoDTO{

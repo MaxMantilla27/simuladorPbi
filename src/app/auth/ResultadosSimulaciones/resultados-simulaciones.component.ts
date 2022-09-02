@@ -17,7 +17,7 @@ export class ResultadosSimulacionesComponent implements OnInit {
   ) { }
   public migaPan = [
     {
-      titulo: 'Simulador CCNA',
+      titulo: 'Simulador POWER BI',
       urlWeb: '/',
     },
     {
@@ -38,10 +38,10 @@ export class ResultadosSimulacionesComponent implements OnInit {
         this.SimulacionesCompletadas=x
         if(x!=undefined){
           this.SimulacionesCompletadas.forEach((y:any)=>{
-            if(y.idSimuladorCcnaModo==1){
+            if(y.idSimuladorPbiModo==1){
               this.ContEstudioCompleto=this.ContEstudioCompleto+1
             }
-            else if(y.idSimuladorCcnaModo==2){
+            else if(y.idSimuladorPbiModo==2){
               this.ContEntrenamientoCompleto=this.ContEntrenamientoCompleto+1
             }
             else{

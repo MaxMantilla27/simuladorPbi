@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RegistroCcnaExamenDTO } from 'src/app/Models/ExamenDTO';
+import { RegistroPbiExamenDTO } from 'src/app/Models/ExamenDTO';
 import { DominioService } from 'src/app/shared/Services/Dominio/dominio.service';
 import { ExamenService } from 'src/app/shared/Services/Examen/examen.service';
 
@@ -20,7 +20,7 @@ export class ModoEstudioComponent implements OnInit {
 
   public migaPan = [
     {
-      titulo: 'Simulador CCNA',
+      titulo: 'Simulador POWER BI',
       urlWeb: '/',
     },
     {
@@ -28,12 +28,12 @@ export class ModoEstudioComponent implements OnInit {
       urlWeb: '/ModoEstudio',
     },
   ];
-  public RegistrarExamenEnvio:RegistroCcnaExamenDTO={
+  public RegistrarExamenEnvio:RegistroPbiExamenDTO={
     id:0,
-    idSimuladorCcnaModo:0,
+    idSimuladorPbiModo:0,
     nombreExamen:'',
     tiempo:0,
-    idSimuladorCcnaDominio:0
+    idSimuladorPbiDominio:0
   }
   public Dominio:any;
   public IdExamen=0;
@@ -68,10 +68,10 @@ export class ModoEstudioComponent implements OnInit {
     if(this.userForm.valid && this.DominioSeleccionado!=0){
       this.BotonResgistrar=true;
       this.RegistrarExamenEnvio.id=0,
-      this.RegistrarExamenEnvio.idSimuladorCcnaModo=1,
+      this.RegistrarExamenEnvio.idSimuladorPbiModo=1,
       this.RegistrarExamenEnvio.nombreExamen=this.userForm.get('NombreSimulacion')?.value;
       this.RegistrarExamenEnvio.tiempo=0,
-      this.RegistrarExamenEnvio.idSimuladorCcnaDominio=this.DominioSeleccionado;
+      this.RegistrarExamenEnvio.idSimuladorPbiDominio=this.DominioSeleccionado;
       this._ExamenService.Registrar(this.RegistrarExamenEnvio).subscribe({
         next:(x)=>{
           this.IdExamen=x.id
@@ -117,7 +117,7 @@ export class ModoEstudioComponent implements OnInit {
       next:(x)=>{
         this.SimulacionesIncompletas=x;
         this.SimulacionesIncompletas.forEach((y:any)=>{
-          if(y.idEstadoExamen!=3 && y.idSimuladorCcnaModo==1){
+          if(y.idEstadoExamen!=3 && y.idSimuladorPbiModo==1){
             this.ContSimulacionesIncompletas=x.length;
           }
         })
@@ -129,7 +129,7 @@ export class ModoEstudioComponent implements OnInit {
       next:(x)=>{
         this.SimulacionesCompletadas=x;
         this.SimulacionesCompletadas.forEach((y:any)=>{
-          if(y.idEstadoExamen==3 && y.idSimuladorCcnaModo==1){
+          if(y.idEstadoExamen==3 && y.idSimuladorPbiModo==1){
             this.ContSimulacionesCompletadas=x.length;
           }
         })

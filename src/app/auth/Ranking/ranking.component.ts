@@ -15,7 +15,7 @@ export class RankingComponent implements OnInit {
   ) { }
   public migaPan = [
     {
-      titulo: 'Simulador CCNA',
+      titulo: 'Simulador POWER BI',
       urlWeb: '/',
     },
     {
