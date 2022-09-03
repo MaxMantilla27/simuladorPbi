@@ -53,51 +53,49 @@
     <div style="margin-bottom: 15px">
       Mejor puntaje por habilidad
     </div>
-    <div *ngIf="ResultadosPorDominio!=undefined" style="margin-bottom: 15px;">
-      <div class="row" style="margin-bottom: 15px">
-        <div class="col-12 col-md-3">
-          <div style="display: flex;justify-content: center;margin-left: -25px;">
-            <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio1"></app-dona-puntos>
-          </div>
-          <div class="subtitulo">
-            Habilidad 1:
-          </div>
-          <div style="font-size: 13px">
-            Preparar los datos.
-          </div>
+    <div class="row" style="margin-bottom: 15px">
+      <div class="col-12 col-md-3">
+        <div style="display: flex;justify-content: center;margin-left: -25px;">
+          <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio1"></app-dona-puntos>
         </div>
-        <div class="col-12 col-md-3">
-          <div style="display: flex;justify-content: center;margin-left: -25px;">
-            <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio2"></app-dona-puntos>
-          </div>
-          <div class="subtitulo">
-            Habilidad 2:
-          </div>
-          <div style="font-size: 13px">
-            Modele los datos.
-          </div>
+        <div class="subtitulo">
+          Habilidad 1:
         </div>
-        <div class="col-12 col-md-3">
-          <div style="display: flex;justify-content: center;margin-left: -25px;">
-            <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio3"></app-dona-puntos>
-          </div>
-          <div class="subtitulo">
-            Habilidad 3:
-          </div>
-          <div style="font-size: 13px">
-            Visualice y analice los datos.
-          </div>
+        <div style="font-size: 13px">
+          Preparar los datos.
         </div>
-        <div class="col-12 col-md-3">
-          <div style="display: flex;justify-content: center;margin-left: -25px;">
-            <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio4"></app-dona-puntos>
-          </div>
-          <div class="subtitulo">
-            Habilidad 4:
-          </div>
-          <div style="font-size: 13px">
-            Implementar y mantener activos.
-          </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div style="display: flex;justify-content: center;margin-left: -25px;">
+          <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio2"></app-dona-puntos>
+        </div>
+        <div class="subtitulo">
+          Habilidad 2:
+        </div>
+        <div style="font-size: 13px">
+          Modele los datos.
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div style="display: flex;justify-content: center;margin-left: -25px;">
+          <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio3"></app-dona-puntos>
+        </div>
+        <div class="subtitulo">
+          Habilidad 3:
+        </div>
+        <div style="font-size: 13px">
+          Visualice y analice los datos.
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div style="display: flex;justify-content: center;margin-left: -25px;">
+          <app-dona-puntos [Puntos]="ResultadosPorDominio.dominio4"></app-dona-puntos>
+        </div>
+        <div class="subtitulo">
+          Habilidad 4:
+        </div>
+        <div style="font-size: 13px">
+          Implementar y mantener activos.
         </div>
       </div>
     </div>
