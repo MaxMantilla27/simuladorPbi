@@ -45,6 +45,7 @@ export class ModoEstudioComponent implements OnInit {
   public SimulacionesInconclusas=0;
   public CantMEstudio=0;
   public ListaEstudio:any;
+  public ListaLogo: any = []
   public TiempoTotalEstudio=0;
   public Hora=0;
   public Minuto=0;
@@ -63,6 +64,7 @@ export class ModoEstudioComponent implements OnInit {
     this.ListaExamenesIncompletos();
     this.ListaExamenesConcluidos();
     this.ObtenerPromedioDominioPorModo();
+    this.ObtenerLogo();
   }
 
   RegistrarExamen(){
@@ -87,8 +89,17 @@ export class ModoEstudioComponent implements OnInit {
         this.Dominio=x;
       }
     })
-
   }
+
+  ObtenerLogo(){
+    this._DominioService.ObtenerLogo().subscribe({
+      next:(x)=>{
+        this.ListaLogo = x;
+        console.log(this.ListaLogo)
+      }
+    })
+  }
+
   ListaExamenesPorModo(){
     this.TiempoTotalEstudio=0;
     this.SimulacionesInconclusas=0;
